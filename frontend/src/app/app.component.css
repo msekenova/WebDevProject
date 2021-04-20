@@ -1,0 +1,26 @@
+.navigation {
+  top: 0;
+  display: inline-block;
+}
+ul li {
+  margin: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-block;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.content{
+  margin-top: 70px;
+}

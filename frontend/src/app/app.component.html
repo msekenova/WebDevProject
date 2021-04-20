@@ -1,38 +1,29 @@
+<body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <nav>
-  <ul class="left">
-    <li>
-      <a id="home-hp" routerLink="/home">Home</a>
-    </li>
-    <li>
-      <a id="about-hp" routerLink="/about">About us</a>
-    </li>
-    <li>
-      <a id="category-hp" routerLink="/category">Category</a>
-    </li>
-  </ul>
-</nav>
-<div class="navigation">
-
-  <div class="search-container">
-    <form>
-      <label>
-        <input class="search" type="text" placeholder="Search.." name="search">
-      </label>
-      <button class="search-bttn" type="submit"><i class="fa fa-search"></i></button>
-    </form>
+  <div class="navigation">
+    <ul class="left">
+      <li>
+        <a id="home-hp" routerLink="/home">Home</a>
+      </li>
+      <li>
+        <a id="about-hp" routerLink="/about">About us</a>
+      </li>
+      <li>
+        <a id="category-hp" routerLink="/category">Category</a>
+      </li>
+    </ul>
+    <ul class="right">
+      <li>
+        <a id="cart-hp" class="right-part" routerLink="/shopping-cart">Shopping cart</a>
+      </li>
+      <li>
+        <a id="auth-hp" class="right-part" routerLink="/authorization">Login/Sign up</a>
+      </li>
+    </ul>
   </div>
-  <ul class="right">
-    <li>
-      <a id="cart-hp" class="right-part" routerLink="/shopping-cart">Shopping cart</a>
-    </li>
-    <li>
-      <a id="auth-hp" class="right-part" routerLink="/authorization">Login/Sign up</a>
-    </li>
-  </ul>
+</nav>
+<div class="content">
+  <router-outlet></router-outlet>
 </div>
-
-
-
-
-<router-outlet></router-outlet>
+</body>
