@@ -10,3 +10,8 @@
   font-weight: normal;
   src: local('Futura LT Light'), url('fonts/FuturaLT-Light.woff') format('woff');
 }
+button:focus { outline: none; }
+input {
+  border: none;
+  outline:none;
+}
