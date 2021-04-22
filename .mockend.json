@@ -1,0 +1,9 @@
+{
+  "Book": 
+  {
+    "title": "string",
+    "isbn": "int",
+    "pageCount": "int",
+    "thumbnailUrl": "https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg"
+  },
+}
