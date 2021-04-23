@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Futura LT Book';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Futura LT Book'), url('fonts/FuturaLT-Book.woff') format('woff');
+}
+@font-face {
+  font-family: 'Futura LT Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Futura LT Light'), url('fonts/FuturaLT-Light.woff') format('woff');
+}
+button:focus { outline: none; }
+input {
+  border: none;
+  outline:none;
+}
+*{
+  margin: 0;
+}
