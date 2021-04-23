@@ -1,0 +1,178 @@
+.shop-page {
+  width: 100%;
+  font-family: 'Futura LT Light', sans-serif;
+  color: rgb(42,124,111);
+}
+.shop-page-top #book-list{
+  top: 0;
+  float: left;
+  color: seagreen;
+  font-family: 'Futura LT Light', sans-serif;
+}
+/*.fa-search {*/
+/*  align-content: center;*/
+/*}*/
+/*fieldset {*/
+/*  margin: 0 auto;*/
+/*  width: 500px;*/
+/*  padding: 4px 0;*/
+/*  border-color: seagreen;*/
+/*  border-radius: 4px;*/
+/*}*/
+/*.inputBook {*/
+/*  padding: 2px;*/
+/*  font-size: 18px;*/
+/*  width: 85%;*/
+/*  margin-top: 2px*/
+/*}*/
+/*.findBook {*/
+/*  float: right;*/
+/*  font-size: 16px;*/
+/*  cursor: pointer;*/
+/*}*/
+/*button {*/
+/*  top: 40%;*/
+/*  border: none;*/
+/*  background: transparent;*/
+/*}*/
+/*.svg-icon {*/
+/*  width: 1.5em;*/
+/*  height: 1.5em;*/
+/*}*/
+
+/*.svg-icon path,*/
+/*.svg-icon polygon,*/
+/*.svg-icon rect {*/
+/*  fill: rgb(42,124,111);*/
+/*}*/
+
+/*.svg-icon circle {*/
+/*  stroke: rgb(42,124,111);*/
+/*  stroke-width: 1;*/
+/*}*/
+
+ul li {
+  width: 20%;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Futura LT Light', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: rgb(42,124,111);
+}
+.books{
+  margin-top: 50px;
+  display: inline-block;
+  margin-left: 15%;
+}
+.book {
+  width: 25%;
+  width: 40%;
+}
+.loading{
+  margin-top: 200px;
+  margin-left: 20%;
+}
+/*.all-book .product-card .popup-btn{*/
+/*  z-index: 2;*/
+/*  color: #fff;*/
+/*  background: #555;*/
+/*  position: absolute;*/
+/*  bottom: 20px;*/
+/*  left: 50%;*/
+/*  transform: translateX(-50%);*/
+/*  font-size: 14px;*/
+/*  text-transform: uppercase;*/
+/*  text-decoration: none;*/
+/*  letter-spacing: 1px;*/
+/*  padding: 10px 15px;*/
+/*  border-radius: 20px;*/
+/*  cursor: pointer;*/
+/*}*/
+/*.all-book .quick-view {*/
+/*  z-index: 2;*/
+/*  background: rgba(255, 255, 255, 0.5);*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  right: 0;*/
+/*  bottom: 0;*/
+/*  left: 0;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  opacity: 0;*/
+/*  visibility: hidden;*/
+/*  transition: 0.5s;*/
+/*}*/
+/*.all-book .quick-view.active {*/
+/*  opacity: 1;*/
+/*  visibility: visible;*/
+/*}*/
+/*.all-book .popup-card{*/
+/*  position: relative;*/
+/*  display: flex;*/
+/*  width: 800px;*/
+/*  height: 500px;*/
+/*  margin: 20px;*/
+/*}*/
+
+/*.all-book .popup-card .popup-img{*/
+/*  z-index: 2;*/
+/*  background: #1D212B;*/
+/*  position: relative;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  width: 45%;*/
+/*  height: 90%;*/
+/*  transform: translateY(25px);*/
+/*  border-top-left-radius: 10px;*/
+/*  border-bottom-left-radius: 10px;*/
+/*}*/
+/*.all-book .popup-card .popup-img img {*/
+/*  z-index: 2;*/
+/*  position: relative;*/
+/*  width: 450px;*/
+/*  left: -50px;*/
+/*}*/
+/*.all-book.popup-card .info{*/
+/*  z-index: 2;*/
+/*  background: #fff;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  width: 55%;*/
+/*  height: 100%;*/
+/*  box-sizing: border-box;*/
+/*  padding: 40px;*/
+/*  border-radius: 10px;*/
+/*}*/
+
+/*.all-book .popup-card .close-btn{*/
+/*  color: #555;*/
+/*  z-index: 3;*/
+/*  position: absolute;*/
+/*  right: 0;*/
+/*  font-size: 20px;*/
+/*  margin: 20px;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*.all-book .popup-card .info h2{*/
+/*  font-size: 40px;*/
+/*  line-height: 20px;*/
+/*  margin: 10px;*/
+/*}*/
+
+/*.all-book .popup-card .info h2 span{*/
+/*  font-size: 15px;*/
+/*  text-transform: uppercase;*/
+/*  letter-spacing: 2px;*/
+/*}*/
+
+/*.all-book .popup-card .info p{*/
+/*  font-size: 15px;*/
+/*  margin: 10px;*/
+/*}*/
