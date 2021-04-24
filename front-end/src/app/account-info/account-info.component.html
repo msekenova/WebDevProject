@@ -1,0 +1,10 @@
+<p>account-info works!</p>
+<div *ngIf="loaded">
+    <h2>Account Information</h2>
+  <input type="text" [(ngModel)]="user.name">
+  <input type="text" [(ngModel)]="user.password">
+  <input type="text" [(ngModel)]="user.phone">
+  <input type="text" [(ngModel)]="user.email">
+  <button (click)="updateInfo()">Save</button>
+</div>
+<p *ngIf = "!loaded">Loading your info...</p>

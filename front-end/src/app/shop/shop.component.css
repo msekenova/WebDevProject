@@ -3,9 +3,13 @@
   font-family: 'Futura LT Light', sans-serif;
   color: rgb(42,124,111);
 }
+.all-book {
+  margin-bottom: 40px;
+}
 .shop-page-top #book-list{
   top: 0;
   float: left;
+  margin-left: 50px;
   color: seagreen;
   font-family: 'Futura LT Light', sans-serif;
 }
@@ -75,6 +79,28 @@ a {
 .loading{
   margin-top: 200px;
   margin-left: 20%;
+}
+.add-to-cart{
+  margin-top: 10px;
+  border-radius: 5px;
+  background: whitesmoke;
+  border-color: rgb(42,124,111);
+  font-family: 'Futura LT Book', sans-serif;
+}
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: rgb(42,124,111);
+}
+
+.svg-icon circle {
+  stroke: rgb(42,124,111);
+  stroke-width: 1;
 }
 /*.all-book .product-card .popup-btn{*/
 /*  z-index: 2;*/
