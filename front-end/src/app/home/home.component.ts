@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {BooksService} from '../books.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  // tslint:disable-next-line:typedef
+  ngOnInit() {
   }
+
+  constructor(private bookService: BooksService) {
+  }
+
 
 }

@@ -1,10 +1,11 @@
-<p>account-info works!</p>
-<div *ngIf="loaded">
-    <h2>Account Information</h2>
-  <input type="text" [(ngModel)]="user.name">
-  <input type="text" [(ngModel)]="user.password">
-  <input type="text" [(ngModel)]="user.phone">
-  <input type="text" [(ngModel)]="user.email">
-  <button (click)="updateInfo()">Save</button>
+<div>
+    <h2>Account Information </h2>
+    <fieldset *ngIf="logged">
+      <input type="text" [(ngModel)]="user.name" placeholder="Name"><br>
+      <input type="text" [(ngModel)]="user.password" placeholder="Password"><br>
+      <input type="text" [(ngModel)]="user.phone" placeholder="Phone"><br>
+      <input type="text" [(ngModel)]="user.email" placeholder="Email"><br>
+      <button (click)="updateInfo()">Save</button>
+      <button (click)="logout()" routerLink="/home">Logout</button>
+    </fieldset>
 </div>
-<p *ngIf = "!loaded">Loading your info...</p>

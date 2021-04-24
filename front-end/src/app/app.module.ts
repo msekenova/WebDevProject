@@ -10,9 +10,10 @@ import { AuthorizationComponent } from './authorization/authorization.component'
 import { LoginComponent } from './login/login.component';
 import { ShopComponent } from './shop/shop.component';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { BookInfoComponent } from './book-info/book-info.component';
 import { AccountInfoComponent } from './account-info/account-info.component';
+import {AuthInterceptor} from './AuthInterceptor';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,13 @@ import { AccountInfoComponent } from './account-info/account-info.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

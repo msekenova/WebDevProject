@@ -12,6 +12,7 @@ export class AuthorizationComponent implements OnInit {
   users: User[];
   email: string;
   password: string;
+  logged = false;
   constructor(private bookService: BooksService) {
     this.email = ' ';
     this.password = ' ';
@@ -22,15 +23,11 @@ export class AuthorizationComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   register(){
-    const user = {
-      email: this.email,
-      password: this.password
-    };
-    // tslint:disable-next-line:no-shadowed-variable
-    this.bookService.register(user as User).subscribe((user) => {
-      this.users.unshift(user);
-      this.email = ' ';
-      this.password = ' ';
+    this.bookService.login(this.email, this.password).subscribe((data) => {
+      localStorage.setItem('id', String(data.id));
+      this.logged = true;
+      this.email = '';
+      this.password = '';
     });
   }
 }

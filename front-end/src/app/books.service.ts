@@ -9,7 +9,6 @@ import {Books, User} from './model';
 export class BooksService {
   BASE_URL = 'http://localhost:3000';
   // tslint:disable-next-line:variable-name
-  base_url = 'http://localhost:8000';
   constructor(private client: HttpClient) { }
 
   getBooks(): Observable<Books[]> {
@@ -22,18 +21,25 @@ export class BooksService {
     return this.client.delete(`${this.BASE_URL}/Books?title=${title}`);
   }
 
-  login(name, password): Observable<User> {
-    return this.client.post<User>(`${this.base_url}/api/login/`, {
-      name,
+  login(email, password): Observable<User> {
+    return this.client.post<User>(`${this.BASE_URL}/User`, {
+      email,
       password
     });
   }
 
-  updateInfo(user: User): Observable<User>{
-    return this.client.put<User>(`${this.base_url}/api/login/${user.id}`, user);
+  getInfo(id: number): Observable<User>{
+    return this.client.get<User>( `${this.BASE_URL}/User?id=${id}`);
   }
 
-  register(user: User): Observable<any>{
-  return this.client.post(`${this.base_url}/api/login`, user);
+  updateInfo(user: User): Observable<User>{
+    return this.client.put<User>(`${this.BASE_URL}/User${user.id}`, user);
+  }
+
+  register(email, password): Observable<any>{
+  return this.client.post(`${this.BASE_URL}/User`, {
+    email,
+    password
+  });
   }
 }

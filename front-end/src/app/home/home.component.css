@@ -1,0 +1,29 @@
+.container{
+  width:100%;
+  height: 100%;
+  margin:0 auto;
+  flex-direction: column;
+}
+
+.photo{
+  float: right;
+  margin-right: 20px;
+}
+
+h2{
+  position: absolute;
+  right: 600px;
+  color: rgb(42,124,111);
+  font-weight: normal;
+  font-family: 'Futura LT Book', sans-serif;
+  font-size: 72px;
+  text-align: center;
+  top: 300px;
+}
+
+p{
+  color: rgb(42,124,111);
+  position: absolute;
+  bottom: 300px;
+  left: 30%;
+}
