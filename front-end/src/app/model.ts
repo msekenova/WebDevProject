@@ -7,3 +7,11 @@ export interface Books {
   shortDescription: string;
   longDescription: string;
 }
+export interface User {
+  id: number;
+  name: string;
+  password: string;
+  phone: number;
+  email: string;
+  token: string;
+}

@@ -15,7 +15,7 @@
               <label>Email</label>
             </div>
             <div class="input">
-              <input>
+              <input [(ngModel)]="email">
             </div>
           </div>
           <div class="auth-pass">
@@ -23,13 +23,13 @@
               <label>Password</label>
             </div>
             <div class="input">
-              <input>
+              <input [(ngModel)]="password">
             </div>
           </div>
         </div>
         <div class="bttn">
           <div class="center-bttn">
-            <button class="sign-up-bttn" type="submit" routerLink="/home">
+            <button class="sign-up-bttn" type="submit" routerLink="/home" (click)="register()">
               <span class="sign-up-txt">Sign up</span>
             </button>
           </div>

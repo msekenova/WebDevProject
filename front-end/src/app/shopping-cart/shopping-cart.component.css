@@ -1,0 +1,46 @@
+.cart {
+  height: 100%;
+  width: 100%;
+  font-family: 'Futura LT Light', sans-serif;
+  color: rgb(42,124,111);
+}
+.shopping-cart{
+  margin-left: 20px;
+}
+.content {
+  height: auto;
+  margin-left: 40px;
+  flex-direction: column;
+}
+.products {
+  height: 250px;
+}
+.prod-img {
+  float: left;
+}
+button {
+  float: right;
+  background: white;
+  border-color: rgb(42,124,111);
+  margin-left: 5px;
+  border-radius: 10px;
+}
+.clear-bttn {
+  margin-top: 20px;
+}
+.svg-icon {
+  top: 2px;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: rgb(42,124,111);
+}
+
+.svg-icon circle {
+  stroke: rgb(42,124,111);
+  stroke-width: 1;
+}

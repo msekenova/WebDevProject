@@ -3296,5 +3296,14 @@
       ],
       "categories": ["Web Development"]
     }
+  ],
+  "User": [
+    {
+      "id": 1,
+      "name": "meiirim",
+      "password": "asdasd",
+      "phone": 123,
+      "email": "asd"
+    }
   ]
 }

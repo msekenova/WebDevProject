@@ -87,7 +87,7 @@ a {
   flex: 0 0 auto;
   width: 100%;
   bottom:0;
-  position: relative;
+  position: fixed;
 }
 .bottom {
   display: flex;
