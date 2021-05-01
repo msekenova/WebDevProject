@@ -1,17 +1,34 @@
-export interface Books {
+export interface Book {
   id: number;
   title: string;
   isbn: number;
-  pageCount: number;
+  page_count: number;
   thumbnailUrl: string;
-  shortDescription: string;
-  longDescription: string;
+  description: string;
+  isPublished: boolean;
+  comment_section: number;
 }
 export interface User {
+  username: string;
+  password: string;
+  email: string;
+}
+export class Author {
   id: number;
   name: string;
-  password: string;
-  phone: number;
-  email: string;
-  token: string;
+  books: Book[];
+}
+export class Category {
+  id: number;
+  name: string;
+}
+export class Comment {
+  id: number;
+  username: string;
+  comment: string;
+  datePosted: string;
+}
+export class CommentSection {
+  id: number;
+  comments: Comment[];
 }

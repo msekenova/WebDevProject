@@ -1,0 +1,14 @@
+<div class="container" *ngIf="loaded">
+  <h2 class="title">{{book.title | uppercase}}</h2>
+  <img class="img" src="{{book.thumbnailUrl}}" alt="url">
+  <h4 class="isbn"><strong>ISBN: </strong>{{book.isbn}}</h4>
+  <p class="no"><strong>No of pages: </strong>{{book.page_count}}</p>
+  <div class="desc">
+    <p ><strong>Description: </strong>{{book.description}}</p>
+  </div>
+  <button class="button_cart" (click)="addToCart(book)">Add to Cart</button>
+  <button class="button_back" (click) = "goBack()">Return Back</button>
+  <app-comment *ngIf="PAGE_ID" [PAGE_ID]="PAGE_ID"></app-comment>
+</div>
+<p *ngIf="!loaded">Loading book...</p>
+

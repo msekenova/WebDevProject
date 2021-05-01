@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {AboutComponent} from './about/about.component';
-import {HomeComponent} from './home/home.component';
-import {AuthorizationComponent} from './authorization/authorization.component';
-import {ShoppingCartComponent} from './shopping-cart/shopping-cart.component';
-import {LoginComponent} from './login/login.component';
-import {ShopComponent} from './shop/shop.component';
-import {BookInfoComponent} from './book-info/book-info.component';
-import {AccountInfoComponent} from './account-info/account-info.component';
+import {AboutComponent} from './components/about/about.component';
+import {HomeComponent} from './components/home/home.component';
+import {AuthorizationComponent} from './components/authorization/authorization.component';
+import {ShoppingCartComponent} from './components/shopping-cart/shopping-cart.component';
+import {LoginComponent} from './components/login/login.component';
+import {ShopComponent} from './components/shop/shop.component';
+import {BookInfoComponent} from './components/book-info/book-info.component';
+import {AccountInfoComponent} from './components/account-info/account-info.component';
+import {CommentComponent} from './components/comment/comment.component';
+import {Author} from './model';
+import {AuthorComponent} from './components/author/author.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'authorization', component: AuthorizationComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'account-info', component: AccountInfoComponent},
   {path: 'shop', component: ShopComponent},
-  {path: 'shop/:title', component: BookInfoComponent},
+  {path: 'shop/:id', component: BookInfoComponent},
+  {path: 'shop/comments', component: CommentComponent},
   {path: 'shopping-cart', component: ShoppingCartComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];

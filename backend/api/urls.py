@@ -4,6 +4,7 @@ from .views import userViews, bookViews, commentViews, categoryViews, authorView
 
 urlpatterns = [
     path('user/create/', userViews.create_user),
+    #path('user/get_info/<str:username>', userViews.get_user_info),
     path('token/obtain/', jwt_views.TokenObtainPairView.as_view(), name='token_create'),
     path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
     path('books/', bookViews.BookList.as_view()),

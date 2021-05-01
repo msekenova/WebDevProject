@@ -6,54 +6,54 @@
 .all-book {
   margin-bottom: 40px;
 }
-.shop-page-top #book-list{
+.shop-page-top .book-list{
   top: 0;
   float: left;
   margin-left: 50px;
   color: seagreen;
   font-family: 'Futura LT Light', sans-serif;
 }
-/*.fa-search {*/
-/*  align-content: center;*/
-/*}*/
-/*fieldset {*/
-/*  margin: 0 auto;*/
-/*  width: 500px;*/
-/*  padding: 4px 0;*/
-/*  border-color: seagreen;*/
-/*  border-radius: 4px;*/
-/*}*/
-/*.inputBook {*/
-/*  padding: 2px;*/
-/*  font-size: 18px;*/
-/*  width: 85%;*/
-/*  margin-top: 2px*/
-/*}*/
-/*.findBook {*/
-/*  float: right;*/
-/*  font-size: 16px;*/
-/*  cursor: pointer;*/
-/*}*/
-/*button {*/
-/*  top: 40%;*/
-/*  border: none;*/
-/*  background: transparent;*/
-/*}*/
-/*.svg-icon {*/
-/*  width: 1.5em;*/
-/*  height: 1.5em;*/
-/*}*/
+.fa-search {
+  align-content: center;
+}
+fieldset {
+  margin: 0 auto;
+  width: 500px;
+  padding: 4px 0;
+  border-color: seagreen;
+  border-radius: 4px;
+}
+.inputBook {
+  padding: 2px;
+  font-size: 18px;
+  width: 85%;
+  margin-top: 2px
+}
+.findBook {
+  float: right;
+  font-size: 16px;
+  cursor: pointer;
+}
+button {
+  top: 40%;
+  border: none;
+  background: transparent;
+}
+.svg-icon {
+  width: 1.5em;
+  height: 1.5em;
+}
 
-/*.svg-icon path,*/
-/*.svg-icon polygon,*/
-/*.svg-icon rect {*/
-/*  fill: rgb(42,124,111);*/
-/*}*/
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: rgb(42,124,111);
+}
 
-/*.svg-icon circle {*/
-/*  stroke: rgb(42,124,111);*/
-/*  stroke-width: 1;*/
-/*}*/
+.svg-icon circle {
+  stroke: rgb(42,124,111);
+  stroke-width: 1;
+}
 
 ul li {
   width: 20%;
@@ -68,10 +68,10 @@ a {
   color: rgb(42,124,111);
 }
 .books{
-  margin-top: 50px;
-  display: inline-block;
+  margin-top: 80px;
   margin-left: 15%;
 }
+
 .book {
   width: 25%;
   width: 40%;
@@ -84,8 +84,9 @@ a {
   margin-top: 10px;
   border-radius: 5px;
   background: whitesmoke;
-  border-color: rgb(42,124,111);
+  border: rgb(42,124,111);
   font-family: 'Futura LT Book', sans-serif;
+  cursor: pointer;
 }
 .svg-icon {
   width: 1em;
@@ -102,6 +103,50 @@ a {
   stroke: rgb(42,124,111);
   stroke-width: 1;
 }
+
+.fa-search {
+  align-content: center;
+}
+fieldset {
+  margin: 0 auto;
+  width: 500px;
+  padding: 4px 0;
+  border-color: seagreen;
+  border-radius: 4px;
+  font-family: 'Futura LT Book', sans-serif;
+}
+.inputBook {
+  padding: 2px;
+  font-size: 18px;
+  width: 85%;
+  margin-top: 2px;
+  font-family: 'Futura LT Book', sans-serif;
+}
+.findBook {
+  float: right;
+  font-size: 16px;
+  cursor: pointer;
+  top: 40%;
+  border: none;
+  background: transparent;
+  font-family: 'Futura LT Book', sans-serif;
+}
+.svg-icon2 {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.svg-icon2 path,
+.svg-icon2 polygon,
+.svg-icon2 rect {
+  fill: rgb(42,124,111);
+}
+
+.svg-icon2 circle {
+  stroke: rgb(42,124,111);
+  stroke-width: 1;
+}
+
 /*.all-book .product-card .popup-btn{*/
 /*  z-index: 2;*/
 /*  color: #fff;*/

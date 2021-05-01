@@ -9,14 +9,29 @@
 }
 .content {
   height: auto;
+  margin-top: 20px;
   margin-left: 40px;
   flex-direction: column;
 }
 .products {
   height: 250px;
 }
+.prod-title {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.prod-isbn {
+  margin-top: 10px;
+  margin-left: 10px;
+}
 .prod-img {
+  margin-top: 10px;
   float: left;
+}
+.prod-shd {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 50%;
 }
 button {
   float: right;

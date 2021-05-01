@@ -1,0 +1,33 @@
+.container {
+  font-family: 'Futura LT Book', sans-serif;
+  color: seagreen;
+  margin-left: 20px;
+}
+.img {
+  margin-top: 10px;
+}
+.isbn {
+  margin-top: 10px;
+}
+.no {
+  margin-top: 10px;
+}
+.desc {
+  margin-top: 10px;
+  width: 40%;
+}
+button {
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 7px;
+  background: whitesmoke;
+  border-color: rgb(42,124,111);
+  color: rgb(42,124,111);
+  font-family: 'Futura LT Light', sans-serif;
+  cursor: pointer;
+}
+.button_back {
+  border-color: brown;
+  color: brown;
+}
+

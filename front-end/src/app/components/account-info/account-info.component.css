@@ -1,0 +1,19 @@
+button{
+  margin: 10px;
+  background: white;
+  color: seagreen;
+  border-radius: 10px;
+  border-color: seagreen;
+  font-family: 'Futura LT Book', sans-serif;
+}
+input{
+  text-decoration: none;
+  margin: 10px;
+  font-size: 16px;
+  color: seagreen;
+  font-family: 'Futura LT Book', sans-serif;
+}
+fieldset{
+  text-decoration: none;
+  border: none;
+}

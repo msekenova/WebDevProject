@@ -1,3 +1,5 @@
+from django.contrib.auth.models import User
+from django.http import Http404
 from django.shortcuts import render
 from rest_framework import status, permissions
 from rest_framework.decorators import api_view, permission_classes
@@ -16,3 +18,12 @@ def create_user(request):
             json = serializer.data
             return Response(json, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+# @api_view(['GET'])
+# @permission_classes([AllowAny])
+# def get_user_info(request):
+#     try:
+#
+#     except User.DoesNotExist as e:
+#         raise Http404

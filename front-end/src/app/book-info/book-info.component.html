@@ -1,9 +1,0 @@
-<div *ngIf="loaded">
-  <h2>{{book.title}}</h2>
-  <h4>{{book.isbn}}</h4>
-  <p>{{book.longDescription}}</p>
-  <button (click)="addToCart(book)">Add to Cart</button>
-  <button (click) = "goBack()">Return Back</button>
-</div>
-<p *ngIf="!loaded">Loading book...</p>
-
