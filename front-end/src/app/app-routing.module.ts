@@ -9,8 +9,8 @@ import {ShopComponent} from './components/shop/shop.component';
 import {BookInfoComponent} from './components/book-info/book-info.component';
 import {AccountInfoComponent} from './components/account-info/account-info.component';
 import {CommentComponent} from './components/comment/comment.component';
-import {Author} from './model';
 import {AuthorComponent} from './components/author/author.component';
+import {AuthorInfoComponent} from './components/author-info/author-info.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -21,6 +21,8 @@ const routes: Routes = [
   {path: 'shop/:id', component: BookInfoComponent},
   {path: 'shop/comments', component: CommentComponent},
   {path: 'shopping-cart', component: ShoppingCartComponent},
+  {path: 'authors', component: AuthorComponent},
+  {path: 'authors/:id', component: AuthorInfoComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 

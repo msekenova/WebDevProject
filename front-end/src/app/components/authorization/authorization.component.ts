@@ -26,7 +26,7 @@ export class AuthorizationComponent implements OnInit {
     const user: User = {
       email: this.email,
       username: this.username,
-      password: this.password
+      password: this.password,
     };
     this.authenticationService.register(user).subscribe(
       data => {

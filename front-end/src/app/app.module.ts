@@ -22,7 +22,9 @@ import { CommentComponent } from './components/comment/comment.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { AuthorComponent } from './components/author/author.component';
+import { AuthorInfoComponent } from './components/author-info/author-info.component';
 
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,10 @@ import { AuthorComponent } from './components/author/author.component';
     LoginComponent,
     ShopComponent,
     BookInfoComponent,
-    CommentComponent
+    CommentComponent,
+    AuthorComponent,
+    NavigationBarComponent,
+    AuthorInfoComponent
   ],
   imports: [
     BrowserModule,

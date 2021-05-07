@@ -27,7 +27,6 @@ export class ShopComponent implements OnInit {
   // tslint:disable-next-line:typedef
   addToCart(book){
     this.cartService.addToCart(book);
-    window.alert('Product added');
   }
   // tslint:disable-next-line:typedef
   getBooks() {

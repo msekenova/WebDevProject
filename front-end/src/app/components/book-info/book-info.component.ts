@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Author, Book} from '../../model';
+import {Book} from '../../model';
 import {Location} from '@angular/common';
 import {ActivatedRoute} from '@angular/router';
 import {BookService} from '../../services/book.service';
@@ -13,19 +13,16 @@ import {AuthorService} from '../../services/author.service';
 })
 export class BookInfoComponent implements OnInit {
 
-  book: Book = null;
-  author: Author = null;
+  book: Book;
   PAGE_ID: number = null;
   loaded: boolean;
   constructor(private route: ActivatedRoute,
               private location: Location,
               private bookService: BookService,
-              private cartService: CartService,
-              private authorService: AuthorService) { }
+              private cartService: CartService) { }
 
   ngOnInit(): void {
     this.getBook();
-    this.getAuthor();
   }
   // tslint:disable-next-line:typedef
   getBook(){
@@ -39,22 +36,11 @@ export class BookInfoComponent implements OnInit {
       });
     });
   }
-  // tslint:disable-next-line:typedef
-  getAuthor(){
-    this.route.paramMap.subscribe((params) => {
-      const id = + params.get('id');
-      this.loaded = false;
-      this.authorService.getAuthor(id).subscribe((author) => {
-        this.author = author;
-        this.loaded = true;
-      });
-    });
-  }
+
 
   // tslint:disable-next-line:typedef
   addToCart(book){
     this.cartService.addToCart(book);
-    window.alert('Product added');
   }
   // tslint:disable-next-line:typedef
   goBack() {

@@ -4,6 +4,7 @@ import {AuthorizationComponent} from '../authorization/authorization.component';
 import {AuthenticationService} from '../../services/authentication.service';
 import {MatDialogRef} from '@angular/material/dialog';
 import {TokenStorageService} from '../../services/token-storage.service';
+import jwt_decode from 'jwt-decode';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -39,4 +40,11 @@ export class LoginComponent implements OnInit {
       }
     );
   }
+
+  // tslint:disable-next-line:typedef
+  // getMyProfile() {
+  //   // @ts-ignore
+  //   this.tokenStorageService.getToken() = localStorage.getItem('token');
+  //   return `/${this.tokenStorageService.getUser()}`;
+  // }
 }

@@ -1,0 +1,25 @@
+
+<div class="container" *ngIf="comments">
+  <div style="display: flex; flex-direction: column; margin-top: 40px; margin-left: 20px;">
+    <div class="clickable" (click)="showForm()" style="margin-top: 5px;"><button class="btn_wrt">WRITE COMMENT</button></div>
+  </div>
+  <div *ngIf="showCommentForm" style="margin-left: 60px; margin-bottom: 20px">
+    <form #writeCommentForm = "ngForm" style="display: flex; flex-direction: column;" >
+      <input [(ngModel)]="message" name="message" id="message">
+      <button class="btn btn-success" style="width: 50px" (click)="writeComment()">Send</button>
+    </form>
+  </div>
+  <div style="display: flex; flex-direction: row;margin-left: 50px; margin-top: 20px" *ngFor="let comment of comments">
+    <div style="display: flex; flex-direction: row">
+      <div style="display: flex; flex-direction: column" class="clickable">
+        <img src="assets/default.png" width="30">
+        <p>{{comment.id}}: {{comment.username}}</p>
+      </div>
+      <p style="width: 900px; height: 100px; left: 10px">{{comment.message}}</p>
+    </div>
+    <p *ngIf="comment.username===tokenStorageService.getUser()" class="clickable" (click)="deleteComment(comment.id)">Delete</p>
+    <input [(ngModel)]="message" name="message" >
+    <p *ngIf="comment.username===tokenStorageService.getUser()" class="clickable" (click)="updateComment(comment.id, comment.message)">Change</p>
+  </div>
+</div>
+

@@ -3,8 +3,10 @@ from django.http import Http404
 from django.shortcuts import render
 from rest_framework import status, permissions
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.permissions import IsAuthenticated, AllowAny, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
+from rest_framework.views import APIView
+
 from ..serializers import UserSerializer
 
 
@@ -20,10 +22,29 @@ def create_user(request):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# @api_view(['GET'])
-# @permission_classes([AllowAny])
-# def get_user_info(request):
-#     try:
-#
-#     except User.DoesNotExist as e:
-#         raise Http404
+class UserDetailAPIView(APIView):
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+    def get_object(self, pk):
+        try:
+            return User.objects.get(id=pk)
+        except User.DoesNotExist as e:
+            raise Http404
+
+    def get(self, request, pk=None):
+        user = self.get_object(pk)
+        serializer = UserSerializer(user)
+        return Response(serializer.data)
+
+    def put(self, request, pk=None):
+        user = self.get_object(pk)
+        serializer = UserSerializer(instance=user, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors)
+
+    def delete(self, request, pk=None):
+        user = self.get_object(pk)
+        user.delete()
+        return Response({'message': 'deleted'}, status=204)

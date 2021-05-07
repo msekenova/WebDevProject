@@ -1,0 +1,10 @@
+.container {
+  width: 10%;
+  flex-direction: column;
+  font-family: 'Futura LT Book', sans-serif;
+  color: seagreen;
+}
+.list {
+  cursor: pointer;
+}
+

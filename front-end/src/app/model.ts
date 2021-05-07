@@ -7,6 +7,8 @@ export interface Book {
   description: string;
   isPublished: boolean;
   comment_section: number;
+  authors: Author;
+  categories: Category;
 }
 export interface User {
   username: string;
@@ -16,19 +18,23 @@ export interface User {
 export class Author {
   id: number;
   name: string;
-  books: Book[];
+  books: Book;
 }
 export class Category {
   id: number;
   name: string;
+  books: Book;
 }
 export class Comment {
   id: number;
   username: string;
-  comment: string;
+  message: string;
   datePosted: string;
 }
 export class CommentSection {
   id: number;
   comments: Comment[];
+}
+export interface AuthToken {
+  token: string;
 }

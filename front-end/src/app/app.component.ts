@@ -24,6 +24,7 @@ export class AppComponent implements OnInit{
   ngOnInit() {
     if (this.tokenStorageService.getToken() === null) {
       this.logged = false;
+      console.log('not logged yet');
     } else {
       this.logged = true;
       console.log('successfully logged');

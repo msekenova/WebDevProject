@@ -1,5 +1,5 @@
 import _datetime as datetime
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, User
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
 
@@ -22,9 +22,26 @@ class BookAuthorManager(models.Manager):
         return books
 
 
-class User(AbstractUser):
-    pass
+# class User(AbstractUser):
+#     #user = models.OneToOneField(User, related_name='userprofile', on_delete=models.CASCADE)
+#
+#     # def to_json(self):
+#     #     return {
+#     #         'id': self.user.id,
+#     #         'username': self.user.username,
+#     #         "email": self.email
+#     #     }
+#     pass
 
+class MyUser(models.Model):
+    user = models.OneToOneField(User, related_name='userprofile', on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'User'
+        verbose_name_plural = 'Users'
+
+    def __str__(self):
+        return f'{self.user.username}'
 
 class CommentSection(models.Model):
 
@@ -36,7 +53,7 @@ class CommentSection(models.Model):
 
 class Comment(models.Model):
     username = models.CharField(max_length=500, blank=True)
-    comment = models.CharField(max_length=500, blank=True)
+    message = models.CharField(max_length=500, blank=True)
     date_posted = models.DateTimeField(default=datetime.datetime.now())
     comment_section = models.ForeignKey(CommentSection, on_delete=models.CASCADE, related_name='comments', blank=True)
 
@@ -60,8 +77,10 @@ class Book(models.Model):
         verbose_name = 'Book'
         verbose_name_plural = 'Books'
 
+
+
     def __str__(self):
-        return f'{self.id}: {self.title} | {self.isbn}'
+        return f' {self.title}'
 
 
 class Author(models.Model):
@@ -73,7 +92,7 @@ class Author(models.Model):
         verbose_name_plural = 'Authors'
 
     def __str__(self):
-        return f'{self.id}: {self.name}'
+        return f' {self.name}'
 
 
 class Category(models.Model):
@@ -85,4 +104,4 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     def __str__(self):
-        return f'{self.id}: {self.name}'
+        return f' {self.name}'

@@ -1,9 +1,23 @@
 from django.contrib import admin
 
 # Register your models here.
-from api.models import Comment, User, Book, Category, CommentSection, Author
+from django.contrib.auth.models import User
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from api.models import Comment, MyUser, Book, Category, CommentSection, Author
 
-admin.site.register(User)
+class MyUserInline(admin.StackedInline):
+    model = MyUser
+    can_delete = False
+    verbose_name_plural = 'MyUsers'
+
+
+class UserAdmin(BaseUserAdmin):
+    inlines = (MyUserInline,)
+
+
+admin.site.unregister(User)
+admin.site.register(User, UserAdmin)
+#admin.site.register(MyUser)
 admin.site.register(Comment)
 admin.site.register(Book)
 admin.site.register(Category)

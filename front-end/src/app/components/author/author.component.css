@@ -1,0 +1,71 @@
+.shop-page-top{
+  top: 0;
+  float: left;
+  margin-left: 50px;
+  color: seagreen;
+  font-family: 'Futura LT Light', sans-serif;
+}
+.all {
+  margin-bottom: 40px;
+}
+.authors {
+  margin-top: 80px;
+  margin-left: 15%;
+}
+.names {
+  color: seagreen;
+  cursor: pointer;
+}
+ul li {
+  width: 40%;
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Futura LT Light', sans-serif;
+}
+.books {
+  margin-left: 15%;
+}
+.fa-search {
+  align-content: center;
+}
+fieldset {
+  margin: 0 auto;
+  width: 500px;
+  padding: 4px 0;
+  border-color: seagreen;
+  border-radius: 4px;
+}
+.inputBook {
+  padding: 2px;
+  font-size: 18px;
+  width: 85%;
+  margin-top: 2px;
+  font-family: 'Futura LT Book', sans-serif;
+}
+.findBook {
+  float: right;
+  font-size: 16px;
+  cursor: pointer;
+}
+button {
+  top: 40%;
+  border: none;
+  background: transparent;
+}
+.svg-icon2 {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.svg-icon2 path,
+.svg-icon2 polygon,
+.svg-icon2 rect {
+  fill: rgb(42,124,111);
+}
+
+.svg-icon2 circle {
+  stroke: rgb(42,124,111);
+  stroke-width: 1;
+}

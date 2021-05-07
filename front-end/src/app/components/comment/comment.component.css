@@ -1,0 +1,31 @@
+.container {
+  font-family: 'Futura LT Light', sans-serif;
+  color: seagreen;
+  margin-bottom: 40px;
+}
+.btn_wrt {
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  border-color: seagreen;
+  float: right;
+  margin-right: 50px;
+}
+#message {
+  width: 900px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border-color: cadetblue;
+  background: aliceblue;
+}
+.btn {
+  margin-top: 10px;
+  border-radius: 5px;
+  background: whitesmoke;
+  border-color: rgb(42,124,111);
+  font-family: 'Futura LT Book', sans-serif;
+}
+.clickable:hover {
+  cursor: pointer;
+}
