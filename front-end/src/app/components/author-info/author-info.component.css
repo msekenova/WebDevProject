@@ -1,0 +1,11 @@
+.button_back {
+  border-color: brown;
+  color: brown;
+  border-radius: 10px;
+}
+.container{
+  margin-top: 100px;
+  margin-left: 30%;
+  font-family: 'Futura LT Light', sans-serif;
+  color: seagreen;
+}
