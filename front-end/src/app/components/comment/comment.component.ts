@@ -36,9 +36,9 @@ export class CommentComponent implements OnInit {
     window.location.reload();
   }
 
-  updateComment(id: number, message: string) {
-    this.commentService.updateComment(id, message);
-  }
+  // updateComment(id: number, message: string) {
+  //   this.commentService.updateComment(id, message);
+  // }
 
   deleteComment(id: number): void {
     this.commentService.deleteComment(id);

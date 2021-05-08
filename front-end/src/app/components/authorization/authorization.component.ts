@@ -13,6 +13,7 @@ export class AuthorizationComponent implements OnInit {
   email: string;
   username: string;
   password: string;
+  id: number;
   logged: boolean;
   constructor( private authenticationService: AuthenticationService) {
   }
@@ -24,6 +25,7 @@ export class AuthorizationComponent implements OnInit {
   register(): void {
 
     const user: User = {
+      id: this.id,
       email: this.email,
       username: this.username,
       password: this.password,
@@ -33,6 +35,7 @@ export class AuthorizationComponent implements OnInit {
         console.log(data);
         this.logged = true;
         window.location.reload();
+        alert('Please, now login');
       },
       error => {
         console.log(error);

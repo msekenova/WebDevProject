@@ -7,7 +7,6 @@ import {ShoppingCartComponent} from './components/shopping-cart/shopping-cart.co
 import {LoginComponent} from './components/login/login.component';
 import {ShopComponent} from './components/shop/shop.component';
 import {BookInfoComponent} from './components/book-info/book-info.component';
-import {AccountInfoComponent} from './components/account-info/account-info.component';
 import {CommentComponent} from './components/comment/comment.component';
 import {AuthorComponent} from './components/author/author.component';
 import {AuthorInfoComponent} from './components/author-info/author-info.component';

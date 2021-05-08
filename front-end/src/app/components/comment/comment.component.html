@@ -18,8 +18,8 @@
       <p style="width: 900px; height: 100px; left: 10px">{{comment.message}}</p>
     </div>
     <p *ngIf="comment.username===tokenStorageService.getUser()" class="clickable" (click)="deleteComment(comment.id)">Delete</p>
-    <input [(ngModel)]="message" name="message" >
-    <p *ngIf="comment.username===tokenStorageService.getUser()" class="clickable" (click)="updateComment(comment.id, comment.message)">Change</p>
+<!--    <input [(ngModel)]="message" name="newmessage" >-->
+<!--    <p *ngIf="comment.username===tokenStorageService.getUser()" class="clickable" (click)="updateComment(comment.id, comment.message)">Change</p>-->
   </div>
 </div>
 

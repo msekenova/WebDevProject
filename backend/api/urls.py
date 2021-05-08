@@ -8,11 +8,12 @@ from .views.userViews import UserDetailAPIView
 urlpatterns = [
     path('users/<int:pk>', UserDetailAPIView.as_view(), name='userDetail'),
     path('user/create/', userViews.create_user),
+    path('users/<int:pk>/update', UserDetailAPIView.as_view(), name='userUpdate'),
     path('token/obtain/', jwt_views.TokenObtainPairView.as_view(), name='token_create'),
     path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
     path('books/', bookViews.BookList.as_view()),
     path('books/<int:book_id>/', bookViews.BookDetailAPIView.as_view()),
-    #path('books/<str:category_list>', bookViews.get_books_by_categories),
+    path('books/by_category/', bookViews.get_books_by_categories),
     path('comments/<int:page_id>/', commentViews.get_comments),
     path('comments/<int:page_id>/post/', commentViews.post_comment),
     path('comments/change/<int:comment_id>', commentViews.change_score),

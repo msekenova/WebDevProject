@@ -38,7 +38,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('email', 'username', 'password')
+        fields = ('id', 'email', 'username', 'password')
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
@@ -74,9 +74,9 @@ class BookSerializer(serializers.ModelSerializer):
 
 
 class AuthorSerializer(serializers.ModelSerializer):
-    id = serializers.IntegerField(read_only=True)
+    id = serializers.IntegerField(write_only=False)
     name = serializers.CharField()
-    books = serializers.StringRelatedField(many=True, read_only=True)
+    books = serializers.StringRelatedField(many=True, write_only=False)
 
     class Meta:
         model = Author

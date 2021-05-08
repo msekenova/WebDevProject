@@ -16,22 +16,6 @@ class BookList(generics.ListCreateAPIView):
     permission_classes = [AllowAny]
 
 
-# class BookListAPIView(APIView):
-#     permission_classes = [AllowAny]
-#
-#     def get(self, request):
-#         book = Book.objects.all()
-#         serializer = BookSerializer(book)
-#         return Response(serializer.data, status=status.HTTP_200_OK)
-#
-#     def post(self, request):
-#         serializer = BookSerializer(data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(serializer.data, status=status.HTTP_201_CREATED)
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
 class BookDetailAPIView(APIView):
     permission_classes = [AllowAny]
 

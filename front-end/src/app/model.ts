@@ -11,6 +11,7 @@ export interface Book {
   categories: Category;
 }
 export interface User {
+  id: number;
   username: string;
   password: string;
   email: string;
