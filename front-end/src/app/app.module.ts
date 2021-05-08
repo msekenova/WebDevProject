@@ -12,7 +12,7 @@ import { ShopComponent } from './components/shop/shop.component';
 import {FormsModule} from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { BookInfoComponent } from './components/book-info/book-info.component';
-import {AuthInterceptor} from './AuthInterceptor';
+// import {AuthInterceptor} from './AuthInterceptor';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDialogModule} from '@angular/material/dialog';

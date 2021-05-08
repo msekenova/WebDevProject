@@ -36,6 +36,3 @@ export class CommentSection {
   id: number;
   comments: Comment[];
 }
-export interface AuthToken {
-  token: string;
-}

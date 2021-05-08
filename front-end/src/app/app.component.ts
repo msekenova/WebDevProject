@@ -32,33 +32,12 @@ export class AppComponent implements OnInit{
     }
   }
 
-  // login(): void {
-  //   const dialogConfig = new MatDialogConfig();
-  //   dialogConfig.height = '400px';
-  //   dialogConfig.width = '550px';
-  //   dialogConfig.backdropClass = 'dark-backdrop';
-  //   const modalDialog = this.matDialog.open(LoginComponent, dialogConfig);
-  // }
-
   // tslint:disable-next-line:typedef
   logout() {
     this.logged = false;
     this.tokenStorageService.signOut();
     window.location.reload();
   }
-  // profile(): void {
-  //   if (this.tokenStorageService.getToken() === null) {
-  //     alert('You need to login first to view your profile');
-  //   } else {
-  //     this.router.navigate(['/account-info/', this.tokenStorageService.getUser()]).then(
-  //       nav => {
-  //         console.log(nav);
-  //       },
-  //       err => {
-  //         console.log(err);
-  //       }
-  //     );
-  //   }
-  // }
+
 
 }

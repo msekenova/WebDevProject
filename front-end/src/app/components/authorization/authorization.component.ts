@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {User} from '../../model';
 import {AuthenticationService} from '../../services/authentication.service';
 import {MatDialogRef} from '@angular/material/dialog';
+import {TokenStorageService} from '../../services/token-storage.service';
 
 @Component({
   selector: 'app-authorization',
@@ -15,7 +16,8 @@ export class AuthorizationComponent implements OnInit {
   password: string;
   id: number;
   logged: boolean;
-  constructor( private authenticationService: AuthenticationService) {
+  constructor( private authenticationService: AuthenticationService,
+               private tokenStorageService: TokenStorageService) {
   }
 
   ngOnInit(): void {
@@ -35,12 +37,20 @@ export class AuthorizationComponent implements OnInit {
         console.log(data);
         this.logged = true;
         window.location.reload();
-        alert('Please, now login');
+        this.authenticationService.login(user).subscribe(
+          ddata => {
+            this.tokenStorageService.saveToken(ddata.access);
+            console.log(ddata.username);
+            this.tokenStorageService.saveUser(user.username);
+            window.location.reload();
+            alert('Thank you for joining)');
+          }
+        );
       },
       error => {
         console.log(error);
       }
     );
-    // this.dialogRef.close();
+
   }
 }
